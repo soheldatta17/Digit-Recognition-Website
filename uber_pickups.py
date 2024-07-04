@@ -77,7 +77,7 @@ st.markdown(f"""
         .icon {{
             display: block;
             position: fixed;
-            top: 20px;
+            top: 60px;
             left: 20px;
             width: 50px;
             height: 50px;
