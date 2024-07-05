@@ -97,8 +97,9 @@ st.markdown(f"""
             border-radius: 50%;
         }}
     </style>
-    <a href="{linkedin_profile_url}" target="_blank" class="icon-link"></a>
+    <a href="{linkedin_profile_url}" target="_blank" class="icon-link">
     <div class="icon"></div>
+    </a>
 """, unsafe_allow_html=True)
 
 # Upload image
