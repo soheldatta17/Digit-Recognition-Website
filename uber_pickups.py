@@ -53,7 +53,7 @@ def predict_digit(image_path, model):
         return None
 
 # Streamlit app
-st.markdown('<a href="https://sohel-datta.vercel.app/" style="text-decoration: none; color: inherit;">'
+st.markdown('<a href="https://sohel-datta.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">'
             '<h1 style="text-align: center;">Digit Recognition by Sohel Datta</h1>'
             '</a>',
             unsafe_allow_html=True)
@@ -69,9 +69,10 @@ model_file = 'mnist_model.pth'
 model = load_model(model_file)
 
 # Define the LinkedIn profile picture link as an icon
-icon_url = "https://media.licdn.com/dms/image/D4E03AQFHPk7bC9ZC5Q/profile-displayphoto-shrink_200_200/0/1692881348340?e=2147483647&v=beta&t=h7VOH_d_jnS5ICwAARY9iAylcrHWKMHEgaNfEij7q8g"
 
-# Add the icon in the top left corner
+icon_url = "https://media.licdn.com/dms/image/D4E03AQFHPk7bC9ZC5Q/profile-displayphoto-shrink_200_200/0/1692881348340?e=2147483647&v=beta&t=h7VOH_d_jnS5ICwAARY9iAylcrHWKMHEgaNfEij7q8g"
+linkedin_profile_url = "https://sohel-datta.vercel.app/"
+
 st.markdown(f"""
     <style>
         .icon {{
@@ -86,7 +87,17 @@ st.markdown(f"""
             background-repeat: no-repeat;
             border-radius: 50%;
         }}
+        .icon-link {{
+            display: block;
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }}
     </style>
+    <a href="{linkedin_profile_url}" target="_blank" class="icon-link"></a>
     <div class="icon"></div>
 """, unsafe_allow_html=True)
 
